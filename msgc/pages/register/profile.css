@@ -1,0 +1,87 @@
+#footer {
+  display: none !important;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+body > #body {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+body > #body > div {
+  width: 18%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+body > #body > div > ul {
+  margin-top: 20px;
+}
+body > #body > div > ul > li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+body > #body > div > ul > li.active {
+  color: #f75148;
+}
+body > #body > ul {
+  width: 81%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+body > #body > ul > li > h2 {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+body > #body > ul > li.profile > div > table {
+  width: 100%;
+}
+body > #body > ul > li.profile > div > table > tbody > tr {
+  border-bottom: 1px dashed gray;
+}
+body > #body > ul > li.profile > div > table > tbody > tr > td {
+  height: 40px;
+}
+body > #body > ul > li.profile > div > table > tbody > tr > td:first-child {
+  width: 100px;
+}
+body > #body > ul > li.my-photo > div > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+body > #body > ul > li.my-photo > div > button {
+  color: white;
+  border-radius: 4px;
+  width: 100px;
+  height: 38px;
+  background-color: #f75148;
+  margin-top: 5px;
+}
+body > #body > ul > li.my-photo > div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  overflow-y: scroll;
+}
+body > #body > ul > li.my-photo > div > ul > li {
+  margin: 0 10px 10px 0;
+}
+body > #body > ul > li.my-photo > div > ul > li > img {
+  width: 80px;
+  height: 80px;
+}
+body > #body > ul > li:last-child > div > button {
+  color: white;
+  background-color: #f75148;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}/*# sourceMappingURL=profile.css.map */
