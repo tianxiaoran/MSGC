@@ -1,0 +1,286 @@
+#body {
+  >.top {
+    background-color: #f7f7f7;
+    padding-bottom: 10px;
+
+    >div {
+      width: 1000px;
+      margin: 0 auto;
+
+      >div {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        >a {
+          color: white;
+          font-weight: bold;
+          padding: 5px 10px;
+          border-radius: 100px;
+          background-image: linear-gradient(to right, #f67236, #f64e36);
+        }
+      }
+
+      >ul {
+        display: flex;
+        justify-content: space-between;
+
+        >li {
+          width: 242px;
+          height: 500px;
+          border-radius: 8px;
+          overflow: hidden;
+          position: relative;
+
+          >div {
+            // 让遮罩不响应鼠标事件
+            // 指针-事件: 没有;
+            pointer-events: none;
+
+            // 子绝父相: 针对父元素不是 定位元素的情况下, 才需要改成相对
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            >i {
+              position: absolute;
+              // border: 1px solid red;
+              width: 62px;
+              height: 78px;
+              background-position: -24px -32px;
+              // 修改背景图的默认宽
+              background-size: 100px;
+
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            >strong {
+              position: absolute;
+              bottom: 10px;
+              left: 10px;
+              color: white;
+              font-size: 22px;
+            }
+          }
+
+          >video {
+            filter: blur(2px);
+            width: 332px;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  >.main {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    >.box {
+      display: flex;
+      justify-content: space-between;
+
+      >div:first-child {
+        width: 70%;
+
+        >.today-hot {
+          >ul {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            >li>a {
+              display: inline-block;
+              padding: 6px 15px;
+              background-color: #f5f5f5;
+              margin: 0 10px 10px 0;
+              border-radius: 100px;
+              color: #333;
+
+              &.active {
+                color: #f65337;
+                background-color: #fee4e1;
+              }
+
+              transition: 0.2s;
+
+              &:hover {
+                box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+              }
+            }
+          }
+        }
+
+        >.today-meal {
+          >div {
+            display: flex;
+            margin: 10px 0;
+
+            >ul {
+              display: flex;
+              margin-left: 20px;
+
+              >li {
+                &.active {
+                  color: white;
+                  background-color: #f65336;
+                }
+
+                cursor: pointer;
+                padding: 5px 20px;
+                color: #555;
+                background-color: #ccc;
+                border-radius: 100px;
+                margin: 0 5px;
+                font-weight: bold;
+              }
+            }
+          }
+
+          >.swiper {
+            .swiper-slide {
+              >img {
+                width: 100%;
+                height: 304px;
+                border-radius: 5px;
+              }
+
+              >p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      >div:last-child {
+        width: 29%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+
+        // 激活状态
+        &.active {
+          >img.hand {
+            right: 0;
+            transform: rotate(0);
+          }
+
+          >img.bg {
+            transform: scale(1.1);
+            // 模糊滤镜
+            filter: blur(2px);
+          }
+        }
+
+        >div {
+          color: white;
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        >img.hand {
+          width: 200px;
+          position: absolute;
+          right: -200px;
+          top: 30%;
+          transform: rotate(30deg);
+        }
+
+        >img {
+          transition: 0.6s;
+        }
+
+        >img.bg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    >.index-items {
+      >h2 {
+        margin: 20px 0 10px 0;
+      }
+
+      >ul {
+        display: flex;
+        justify-content: space-between;
+
+        >li {
+          width: 19.5%;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+
+          &:hover {
+            >strong {
+              color: #f64e36;
+            }
+
+            >div>span {
+              bottom: 0;
+            }
+          }
+
+          >p {
+            font-size: 12px;
+            color: #888;
+
+            &::before {
+              content: '';
+              display: inline-block;
+              // css中, 路径必须相对当前scss文件的
+              background-image: url(../../assets/img/453.png);
+              width: 14px;
+              height: 14px;
+              background-size: 25px;
+              // border: 1px solid blue;
+              background-position-y: -50px;
+              transform: translateY(3px);
+              margin-right: 2px;
+            }
+          }
+
+          >strong {
+            margin: 4px 0;
+          }
+
+          >div {
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+
+            >span {
+              position: absolute;
+              color: white;
+              background-color: rgba(0, 0, 0, 0.5);
+              bottom: -24px;
+              width: 100%;
+              font-size: 14px;
+              text-align: center;
+              line-height: 24px;
+              transition: 0.2s;
+            }
+
+            >img {
+              width: 100%;
+              height: 260px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
